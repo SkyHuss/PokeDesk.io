@@ -7,6 +7,7 @@ import Pokedex from "./pages/pokedex/Pokedex";
 import Shop from "./pages/shop/Shop";
 import UserProfile from "./pages/userProfile/UserProfile";
 import Catch from "./pages/catch/Catch";
+import BottomNavbar from "./components/bottomNavbar/BottomNavbar";
 
 function AppLayout() {
   return (
@@ -15,6 +16,7 @@ function AppLayout() {
       <div className="content">
         <Outlet />
       </div>
+      <BottomNavbar />
     </div>
   )
 }

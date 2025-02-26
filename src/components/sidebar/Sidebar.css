@@ -77,3 +77,9 @@
     justify-content: center;
     gap: 8px;
 }
+
+@media screen and (max-width: 520px) {
+    .sidebar-container {
+        display: none;
+    }
+}
