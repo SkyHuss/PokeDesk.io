@@ -8,12 +8,14 @@ import Shop from "./pages/shop/Shop";
 import UserProfile from "./pages/userProfile/UserProfile";
 import Catch from "./pages/catch/Catch";
 import BottomNavbar from "./components/bottomNavbar/BottomNavbar";
+import Header from "./components/header/Header";
 
 function AppLayout() {
   return (
     <div id='app-container' className='app-container'>
       <Sidebar />
       <div className="content">
+        <Header />
         <Outlet />
       </div>
       <BottomNavbar />

@@ -1,0 +1,26 @@
+[
+    {
+        "label": "Pokeball",
+        "quantity": -1,
+        "success": 25,
+        "image": "/assets/pokeballs/Pok%3F_Ball.webp"
+    },
+    {
+        "label": "Superball",
+        "quantity": 5,
+        "success": 45,
+        "image": "/assets/pokeballs/Super_Ball.webp"
+    },
+    {
+        "label": "Hyperball",
+        "quantity": 2,
+        "success": 70,
+        "image": "/assets/pokeballs/Hyper_Ball.webp"
+    },
+    {
+        "label": "Masterball",
+        "quantity": -1,
+        "success": 100,
+        "image": "/assets/pokeballs/Master_Ball.webp"
+    }
+]

@@ -1,0 +1,13 @@
+.user-picture-container {
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    border: solid 2px var(--primary-400);
+}
+
+.user-picture-container img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+}

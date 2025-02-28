@@ -1,0 +1,55 @@
+.user-gold-container {
+    height: 50px;
+    width: 80px;
+    border: solid 2px var(--info-200);
+    background-color: var(--secondary-000);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+.user-gold-container:hover {
+    cursor: pointer;
+}
+
+.user-gold-container .spinner{
+    animation: rotate 1s linear infinite;
+}
+
+.user-gold-container .amount {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.user-gold-container .amount svg {
+    color: var(--gold);
+}
+
+.user-gold-container:hover .amount svg {
+    animation: flip 0.4s ease-in-out infinite;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flip {
+    0% {
+        transform: rotateX(0deg);
+    }
+    50% {
+        transform: rotateX(90deg);
+        filter: brightness(75%);
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}

@@ -5,7 +5,7 @@ import BottomNavbarItem from './bottomNavBarItem/BottomNavBarItem';
 export default function BottomNavbar() {
     return <div className="bottom-navbar-container">
         {menuList.map((item) => (
-            <BottomNavbarItem item={item}/>
+            <BottomNavbarItem item={item} key={'bottom-'+item.path}/>
         ))}
     </div>
 }
