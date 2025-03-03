@@ -8,7 +8,7 @@ type Pokeball = {
   image: string;
 };
 
-const PokeballList: React.FC = () => {
+export default function Inventory() {
   const [pokeballs, setPokeballs] = useState<Pokeball[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -50,5 +50,3 @@ const PokeballList: React.FC = () => {
       </div>
   );
 };
-
-export default PokeballList;
