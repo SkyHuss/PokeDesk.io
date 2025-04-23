@@ -1,35 +1,61 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./App.css"
+import Sidebar from "./components/sidebar/Sidebar"
+import { createBrowserRouter, Outlet, RouterProvider } from 'react-router-dom';
+import "./contants/color.css"
+import Inventory from "./pages/inventory/Inventory";
+import Pokedex from "./pages/pokedex/Pokedex";
+import Shop from "./pages/shop/Shop";
+import UserProfile from "./pages/userProfile/UserProfile";
+import Catch from "./pages/catch/Catch";
+import BottomNavbar from "./components/bottomNavbar/BottomNavbar";
+import Header from "./components/header/Header";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+function AppLayout() {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div id='app-container' className='app-container'>
+      <Sidebar />
+      <div className="content">
+        <Header />
+        <Outlet />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <BottomNavbar />
+    </div>
   )
 }
 
-export default App
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <AppLayout />,
+    children: [ // Children are render in the Outlet
+      {
+        path: '/catch',
+        element: <Catch />
+      },
+      {
+        path: '/inventory',
+        element: <Inventory />
+      },
+      {
+        path: '/pokedex',
+        element: <Pokedex />
+      },
+      {
+        path: '/store',
+        element: <Shop />
+      },
+      {
+        path: '/account',
+        element: <UserProfile />
+      }
+    ]
+  }
+])
+
+export default function App() {
+
+  return (
+    <RouterProvider router={router} />
+  )
+
+}

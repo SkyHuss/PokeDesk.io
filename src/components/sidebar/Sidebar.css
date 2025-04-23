@@ -1,0 +1,85 @@
+.sidebar-container {
+    background-color: var(--primary-300);
+    width: 350px;
+    transition: all 0.3s;
+    padding: 10px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-container.collapsed {
+    width: 80px;
+}
+
+.sidebar-container .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    border-bottom: solid 1px var(--secondary-100);
+    color: var(--secondary-100);
+}
+
+.sidebar-container .header .title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.sidebar-container .header .title svg {
+    height: 36px;
+    width: 36px;
+}
+
+.sidebar-container .header .collapse-button {
+    margin: auto;
+    border-radius: 10px;
+    height: 36px;
+    width: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.sidebar-container .header .collapse-button:hover {
+    background-color: var(--primary-400);
+    cursor: pointer;
+}
+
+.sidebar-container .header .title + .collapse-button {
+    margin: unset;
+}
+
+.sidebar-container .menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 0;
+}
+
+.sidebar-container .footer {
+    padding-top: 22px;
+    padding-bottom: 12px;
+    border-top: solid 1px var(--secondary-100);
+    color: var(--secondary-100);
+    margin-top: auto;
+}
+
+.sidebar-container .footer span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-align: center;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar-container {
+        display: none;
+    }
+}

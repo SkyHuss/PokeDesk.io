@@ -1,0 +1,16 @@
+.bottom-navbar-item-container {
+    height: 44px;
+    width: 44px;
+    border-radius: 10px;
+    background-color: var(--primary-300);
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-100);
+}
+
+.bottom-navbar-item-container.active {
+    background-color: var(--primary-400);
+    color: var(--secondary-000);
+}
